@@ -18,10 +18,10 @@ app.use((req, res, next) => {
 // routes
 app.use('/api/workouts', workoutRoutes)
 
-app.use(express.static("../frontend/build"));
+/*app.use(express.static("../frontend/build"));
 app.get("*",(req,res)=>{
   res.sendFile(path.resolve(__dirname,"frontend","build","index.html"))
-});
+});*/
 
 // connect to db
 mongoose.connect(process.env.MONGO_URI)
